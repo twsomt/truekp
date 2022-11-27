@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+    {% for feed in feeds%}
+    <article>
+    <ul>
+        <li>Заголовок: {{ feed.title }}</li>
+        <li>Контент: {{ feed.content }}</li>
+    </ul>
+    </article>
+    {% if not forloop.last %}<hr>{% endif %}
+    {% endfor %}
+{% endblock %}
